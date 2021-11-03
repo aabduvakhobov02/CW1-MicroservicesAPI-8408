@@ -12,6 +12,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CW1_MicroservicesAPI_8408.DBContexts;
+using CW1_MicroservicesAPI_8408.Repository;
 
 namespace CW1_MicroservicesAPI_8408
 {
@@ -29,6 +31,7 @@ namespace CW1_MicroservicesAPI_8408
         {
             services.AddMvc();
             services.AddDbContext<ProductContext>(o => o.UseSqlServer(Configuration.GetConnectionString("ProductDB")));
+            services.AddTransient<IProductRepository, ProductRepository>();
             //services.AddControllers();
             services.AddSwaggerGen(c =>
             {

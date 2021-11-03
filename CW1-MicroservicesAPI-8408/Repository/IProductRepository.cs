@@ -10,7 +10,7 @@ namespace CW1_MicroservicesAPI_8408.Repository
     {
         void InsertProduct(Product product);
         void UpdateProduct(Product product);
-        void DeleteProduct(int productId);
+        void DeleteProduct(int Id);
         Product GetProductById(int id);
         IEnumerable<Product> GetProducts();
     }

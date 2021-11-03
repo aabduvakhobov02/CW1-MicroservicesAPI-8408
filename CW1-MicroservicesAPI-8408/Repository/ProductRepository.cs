@@ -15,15 +15,15 @@ namespace CW1_MicroservicesAPI_8408.Repository
         {
             _dbContext = dbContext;
         }
-        public void DeleteProduct(int productId)
+        public void DeleteProduct(int Id)
         {
-            var product = _dbContext.Products.Find(productId);
+            var product = _dbContext.Products.Find(Id);
             _dbContext.Products.Remove(product);
             Save();
         }
-        public Product GetProductById(int productId)
+        public Product GetProductById(int Id)
         {
-            var prod = _dbContext.Products.Find(productId);
+            var prod = _dbContext.Products.Find(Id);
             _dbContext.Entry(prod).Reference(s => s.ProductCategory).Load();
             return prod;
         }

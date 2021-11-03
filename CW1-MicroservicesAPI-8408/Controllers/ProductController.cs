@@ -1,8 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CW1_MicroservicesAPI_8408.Models;
+using CW1_MicroservicesAPI_8408.Repository;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Transactions;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -64,9 +67,9 @@ namespace CW1_MicroservicesAPI_8408.Controllers
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(int Id)
         {
-            _productRepository.DeleteProduct(id);
+            _productRepository.DeleteProduct(Id);
             return new OkResult();
         }
     }
