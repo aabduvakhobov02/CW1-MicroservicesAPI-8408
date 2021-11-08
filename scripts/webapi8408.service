@@ -3,7 +3,7 @@ Description=Start the Website
 
 [Service]
 WorkingDirectory=/var/www/
-ExecStart=/usr/bin/dotnet  /var/www/CW1-MicroservicesAPI-8408.dll
+ExecStart=/usr/local/bin/dotnet  /var/www/CW1-MicroservicesAPI-8408.dll
 Restart=always
 # Restart service after 10 seconds if the dotnet service crashes:
 RestartSec=10
