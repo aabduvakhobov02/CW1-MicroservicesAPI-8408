@@ -22,7 +22,6 @@ C:\Users\abduvakhobov_a\Documents\6BIS3\DSCC\CW1\CW1-MicroservicesAPI-8408\CW1-M
 C:\Users\abduvakhobov_a\Documents\6BIS3\DSCC\CW1\CW1-MicroservicesAPI-8408\CW1-MicroservicesAPI-8408\obj\Debug\net5.0\staticwebassets\CW1-MicroservicesAPI-8408.StaticWebAssets.xml
 C:\Users\abduvakhobov_a\Documents\6BIS3\DSCC\CW1\CW1-MicroservicesAPI-8408\CW1-MicroservicesAPI-8408\obj\Debug\net5.0\scopedcss\bundle\CW1-MicroservicesAPI-8408.styles.css
 C:\Users\abduvakhobov_a\Documents\6BIS3\DSCC\CW1\CW1-MicroservicesAPI-8408\CW1-MicroservicesAPI-8408\obj\Debug\net5.0\CW1-MicroservicesAPI-8408.RazorTargetAssemblyInfo.cache
-C:\Users\abduvakhobov_a\Documents\6BIS3\DSCC\CW1\CW1-MicroservicesAPI-8408\CW1-MicroservicesAPI-8408\obj\Debug\net5.0\CW1-MicroservicesAPI-8408.csproj.CopyComplete
 C:\Users\abduvakhobov_a\Documents\6BIS3\DSCC\CW1\CW1-MicroservicesAPI-8408\CW1-MicroservicesAPI-8408\obj\Debug\net5.0\CW1-MicroservicesAPI-8408.dll
 C:\Users\abduvakhobov_a\Documents\6BIS3\DSCC\CW1\CW1-MicroservicesAPI-8408\CW1-MicroservicesAPI-8408\obj\Debug\net5.0\ref\CW1-MicroservicesAPI-8408.dll
 C:\Users\abduvakhobov_a\Documents\6BIS3\DSCC\CW1\CW1-MicroservicesAPI-8408\CW1-MicroservicesAPI-8408\obj\Debug\net5.0\CW1-MicroservicesAPI-8408.pdb

@@ -1,5 +1,6 @@
 ﻿using CW1_MicroservicesAPI_8408.Models;
 using CW1_MicroservicesAPI_8408.Repository;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -7,56 +8,54 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Transactions;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace CW1_MicroservicesAPI_8408.Controllers
 {
     [Produces("application/json")]
-    [Route("api/Product")]
-    public class ProductController : Controller
+    [Route("api/Category")]
+    public class CategoryController : Controller
     {
-        private readonly IProductRepository _productRepository;
-        public ProductController(IProductRepository productRepository)
+        private readonly ICategoryRepository _categoryRepository;
+        public CategoryController(ICategoryRepository categoryRepository)
         {
-            _productRepository = productRepository;
+            _categoryRepository = categoryRepository;
         }
         // GET: api/Product
         [HttpGet]
         public IActionResult Get()
         {
-            var products = _productRepository.GetProducts();
-            return new OkObjectResult(products);
+            var categories = _categoryRepository.GetCategories();
+            return new OkObjectResult(categories);
         }
         // GET: api/Product/5
-        [HttpGet("{id}", Name = "GetProduct")]
+        [HttpGet("{id}", Name = "GetCategory")]
         public IActionResult Get(int id)
         {
-            var product = _productRepository.GetProductById(id);
-            return new OkObjectResult(product);
+            var category = _categoryRepository.GetCategoryById(id);
+            return new OkObjectResult(category);
             //return "value";
         }
 
         // POST: api/Product
         [HttpPost]
-        public IActionResult Post([FromBody] Product product)
+        public IActionResult Post([FromBody] Category category)
         {
             using (var scope = new TransactionScope())
             {
-                _productRepository.InsertProduct(product);
+                _categoryRepository.InsertCategory(category);
                 scope.Complete();
-                return CreatedAtAction(nameof(Get), new { id = product.Id }, product);
+                return CreatedAtAction(nameof(Get), new { id = category.Id }, category);
             }
         }
 
-        // PUT: api/Product/5
+        // PUT: api/category/5
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] Product product)
+        public IActionResult Put(int id, [FromBody] Category category)
         {
-            if (product != null)
+            if (category != null)
             {
                 using (var scope = new TransactionScope())
                 {
-                    _productRepository.UpdateProduct(product);
+                    _categoryRepository.UpdateCategory(category);
                     scope.Complete();
                     return new OkResult();
                 }
@@ -68,9 +67,8 @@ namespace CW1_MicroservicesAPI_8408.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int Id)
         {
-            _productRepository.DeleteProduct(Id);
+            _categoryRepository.DeleteCategory(Id);
             return new OkResult();
         }
     }
-
 }

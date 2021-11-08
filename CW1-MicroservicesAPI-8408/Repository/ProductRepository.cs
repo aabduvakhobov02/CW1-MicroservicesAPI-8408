@@ -21,7 +21,7 @@ namespace CW1_MicroservicesAPI_8408.Repository
             _dbContext.Products.Remove(product);
             Save();
         }
-        public Product GetProductById(int Id)
+        public Product GetProductById(int Id)   
         {
             var prod = _dbContext.Products.Find(Id);
             _dbContext.Entry(prod).Reference(s => s.ProductCategory).Load();
