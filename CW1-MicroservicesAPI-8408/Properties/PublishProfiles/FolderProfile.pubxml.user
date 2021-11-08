@@ -5,6 +5,6 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\abduvakhobov_a\Documents\6BIS3\DSCC\CW1\CW1-MicroservicesAPI-8408\CW1-MicroservicesAPI-8408\bin\Release\net5.0\publish\</_PublishTargetUrl>
-    <History>True|2021-11-08T21:08:36.5451081Z;</History>
+    <History>True|2021-11-08T22:33:59.8541961Z;True|2021-11-09T02:08:36.5451081+05:00;</History>
   </PropertyGroup>
 </Project>

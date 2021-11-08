@@ -50,7 +50,7 @@ namespace CW1_MicroservicesAPI_8408
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "CW1_MicroservicesAPI_8408 v1"));
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 
