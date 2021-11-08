@@ -1,0 +1,17 @@
+version: 0.0
+os: linux
+files:
+  - source: CW1-MicroservicesAPI-8408/bin/Release/net5.0/publish
+    destination: /var/www
+  - source: scripts/webapi8408.service
+    destination: /etc/systemd/system
+hooks:
+  ApplicationStop:
+    - location: scripts/application_stop.sh
+      timeout: 300
+  BeforeInstall:
+    - location: scripts/before-install.sh
+      timeout: 300
+  ApplicationStart:
+    - location: scripts/application_start.sh
+      timeout: 300

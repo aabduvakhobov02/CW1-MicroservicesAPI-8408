@@ -1,0 +1,2 @@
+systemctl stop webapi8408.service
+systemctl disable webapi8408.service

@@ -37,15 +37,15 @@ namespace CW1_MicroservicesAPI_8408.Repository
             _dbContext.Add(product);
             Save();
         }
-        public void Save()
-        {
-            _dbContext.SaveChanges();
-        }
         public void UpdateProduct(Product product)
         {
             _dbContext.Entry(product).State =
             Microsoft.EntityFrameworkCore.EntityState.Modified;
             Save();
+        }
+        public void Save()
+        {
+            _dbContext.SaveChanges();
         }
     }
 }
